@@ -4,6 +4,12 @@ const ui = {
     sizeSelector : document.querySelector('.size-selector')
 };
 
+function removeCells(){
+    while(ui.canvas.lastChild){
+        ui.canvas.removeChild(ui.canvas.lastChild);
+    }
+}
+
 function clearCanvas(){
     ui.allCells.forEach((element) => {element.style['background-color'] = 'white'});
 }
@@ -24,7 +30,7 @@ function buildCanvas(size){
 
 function setUp(){
     ui.clearButton.addEventListener('click', clearCanvas);
-    ui.sizeSelector.addEventListener('change', (e) => { buildCanvas(e.target.value); clearCanvas(); })
+    ui.sizeSelector.addEventListener('change', (e) => { removeCells(); buildCanvas(e.target.value);})
     buildCanvas(ui.sizeSelector.value);
 }
 
