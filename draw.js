@@ -1,23 +1,29 @@
 const ui = {
     canvas : document.querySelector('.canvas'),
-    clear : document.querySelector('.clear'),
+    clearButton : document.querySelector('.clear'),
 };
 
 function clearCanvas(){
     ui.allCells.forEach((element) => {element.style['background-color'] = 'white'});
 }
 
-ui.canvas.style.display = 'grid';
-ui.canvas.style['grid-template-columns'] = 'repeat(128, auto)';
-
-for(let i = 0; i< 128; i++){
-    for(let j = 0; j < 128; j++){
-        let cell = document.createElement('div');
-        cell.classList.add('cell');
-        cell.addEventListener('mouseover', (e) => { e.target.style['background-color'] = 'black';});
-        ui.canvas.appendChild(cell);
+function buildCanvas(size){
+    ui.canvas.style.display = 'grid';
+    ui.canvas.style['grid-template-columns'] = `repeat(${size}, auto)`;
+    for(let i = 0; i< size; i++){
+        for(let j = 0; j < size; j++){
+            let cell = document.createElement('div');
+            cell.classList.add('cell');
+            cell.addEventListener('mouseover', (e) => { e.target.style['background-color'] = 'black';});
+            ui.canvas.appendChild(cell);
+        }
     }
+    ui.allCells = document.querySelectorAll('.cell');
 }
 
-ui.allCells = document.querySelectorAll('.cell');
-ui.clear.addEventListener('click', clearCanvas);
+function setUp(){
+    ui.clearButton.addEventListener('click', clearCanvas);
+    buildCanvas(128);
+}
+
+setUp();
