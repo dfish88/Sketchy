@@ -1,7 +1,8 @@
 const ui = {
     canvas : document.querySelector('.canvas'),
     clearButton : document.querySelector('.clear'),
-    sizeSelector : document.querySelector('.size-selector')
+    sizeSelector : document.querySelector('.size-selector'),
+    colorSelector : document.querySelector('.color-selector')
 };
 
 function removeCells(){
@@ -21,7 +22,7 @@ function buildCanvas(size){
         for(let j = 0; j < size; j++){
             let cell = document.createElement('div');
             cell.classList.add('cell');
-            cell.addEventListener('mouseover', (e) => { e.target.style['background-color'] = 'black';});
+            cell.addEventListener('mouseover', (e) => { e.target.style['background-color'] = ui.colorSelector.value;});
             ui.canvas.appendChild(cell);
         }
     }
