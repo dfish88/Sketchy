@@ -26,9 +26,8 @@ function getRandomColor(){
         6 : 'rgba(79, 220, 74, 1)',
         7 : 'rgba(63, 218, 216, 1)',
         8 : 'rgba(47, 201, 226, 1)',
-        9 : 'rgba(28, 127, 238, 1)',
-        10 : 'rgba(251, 7, 217, 1)',
-        11 : 'rgba(255, 220, 33, 1)',
+        9 : 'rgba(251, 7, 217, 1)',
+        10 : 'rgba(255, 220, 33, 1)',
     }
     return colors[Math.floor(Math.random() * Object.keys(colors).length) + 1];
 }
