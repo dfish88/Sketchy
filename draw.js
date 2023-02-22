@@ -1,6 +1,7 @@
 const ui = {
     canvas : document.querySelector('.canvas'),
     clearButton : document.querySelector('.clear'),
+    sizeSelector : document.querySelector('.size-selector')
 };
 
 function clearCanvas(){
@@ -23,7 +24,8 @@ function buildCanvas(size){
 
 function setUp(){
     ui.clearButton.addEventListener('click', clearCanvas);
-    buildCanvas(128);
+    ui.sizeSelector.addEventListener('change', (e) => { buildCanvas(e.target.value); clearCanvas(); })
+    buildCanvas(ui.sizeSelector.value);
 }
 
 setUp();
