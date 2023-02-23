@@ -5,20 +5,24 @@
         <script src="./draw.js" defer ></script>
     </head>
     <body>
-        <div class="left-sidebar">
-            <div class="color-container">
-                <label for="color-picker">Pen Color</label>
-                <input type="color" value="#000000" class="color-selector" name="color-picker">
+        <div class="header"> Sketch-It </div>
+        <div class="main">
+            <div class="left-sidebar">
+                <div class="color-container">
+                    <label for="color-picker">Pen Color</label>
+                    <input type="color" value="#000000" class="color-selector" name="color-picker">
+                </div>
+                <button class="clear">Clear</button>
+                <button class="rainbow-toggle">Rainbow!</button>
+                <div class="size-container">
+                    <label for="size">Pixel Size</label>
+                    <input type="range" min="0" max="112" value="112" class="size-selector" name="size">
+                </div>
             </div>
-            <button class="clear">Clear</button>
-            <button class="rainbow-toggle">Rainbow!</button>
-            <div class="size-container">
-                <label for="size">Pixel Size</label>
-                <input type="range" min="0" max="112" value="112" class="size-selector" name="size">
+            <div class="canvas-container">
+                <div class="canvas"></div>
             </div>
         </div>
-        <div class="canvas-container">
-            <div class="canvas"></div>
-        </div>
+        <div class="footer">Footer</div>
     </body>
 </html>
