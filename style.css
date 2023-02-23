@@ -3,6 +3,19 @@ body{
     justify-content: center;
 }
 
+button{
+    background-color: whitesmoke;
+    border-radius: 8px;
+    border-width : 1px;
+    padding: 8px;
+    font-size: 24px;
+}
+
+button:hover{
+    background-color: rgb(85, 84, 84);
+    color: whitesmoke;
+}
+
 .left-sidebar{
     display: flex;
     flex-direction: column;
