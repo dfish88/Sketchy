@@ -1,10 +1,13 @@
 body{
     display: flex;
     justify-content: center;
+    background-color: rgb(241, 255, 225);
+    font-family: sans-serif;
+    gap: 100px;
 }
 
 button{
-    background-color: whitesmoke;
+    background-color: rgb(241, 255, 225);;
     border-radius: 8px;
     border-width : 1px;
     padding: 8px;
@@ -12,8 +15,7 @@ button{
 }
 
 button:hover{
-    background-color: rgb(85, 84, 84);
-    color: whitesmoke;
+    transform: scale(1.15);
 }
 
 .left-sidebar{
