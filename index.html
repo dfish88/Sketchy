@@ -6,10 +6,16 @@
     </head>
     <body>
         <div class="left-sidebar">
-            <input type="color" value="#000000" class="color-selector">
+            <div class="color-container">
+                <label for="color-picker">Pen Color</label>
+                <input type="color" value="#000000" class="color-selector" name="color-picker">
+            </div>
             <button class="clear">Clear</button>
             <button class="rainbow-toggle">Rainbow!</button>
-            <input type="range" min="16" max="128" value="16" class="size-selector">
+            <div class="size-container">
+                <label for="size">Pixel Size</label>
+                <input type="range" min="16" max="128" value="16" class="size-selector" name="size">
+            </div>
         </div>
         <div class="canvas-container">
             <div class="canvas"></div>
