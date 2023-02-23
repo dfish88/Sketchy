@@ -11,7 +11,7 @@ button{
     border-radius: 8px;
     border-width : 1px;
     padding: 8px;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 button:hover{
@@ -54,5 +54,14 @@ button:hover{
     );
 }
 
+.color-container, .size-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+}
+
 .color-selector{
+    width: 75px;
 }
