@@ -1,9 +1,11 @@
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     background-color: rgb(241, 255, 225);
     font-family: sans-serif;
-    gap: 100px;
+    min-height: 100vh;
+    margin: 0;
 }
 
 button{
@@ -16,6 +18,29 @@ button{
 
 button:hover{
     transform: scale(1.15);
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex: 1 1 auto;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
 }
 
 .left-sidebar{
