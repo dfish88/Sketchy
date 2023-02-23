@@ -38,6 +38,7 @@ function getColor(){
     return ui.rainbowToggle.classList.contains('active') ? getRandomColor() : ui.colorSelector.value;
 }
 
+/* build drawing canavs out of grid of divs that each have a listerner added that is used to color them */
 function buildCanvas(size){
     ui.canvas.style.display = 'grid';
     ui.canvas.style['grid-template-columns'] = `repeat(${size}, auto)`;
