@@ -19,23 +19,23 @@ function clearCanvas(){
 function getRandomColor(){
     const colors = {
         1 : 'rgba(255, 0, 0, 1)',
-        2 : 'rgba(0, 255, 0, 1)',
-        3 : 'rgba(0, 0, 255, 1)',
-        4 : 'rgba(255, 154, 0, 1)',
-        5 : 'rgba(208, 222, 33, 1)',
-        6 : 'rgba(79, 220, 74, 1)',
-        7 : 'rgba(63, 218, 216, 1)',
-        8 : 'rgba(47, 201, 226, 1)',
-        9 : 'rgba(251, 7, 217, 1)',
-        10 : 'rgba(255, 220, 33, 1)',
+        2 : 'rgba(255, 154, 0, 1)',
+        3 : 'rgba(255, 220, 33, 1)',
+        4 : 'rgba(208, 222, 33, 1)',
+        5 : 'rgba(79, 220, 74, 1)',
+        6 : 'rgba(63, 218, 216, 1)',
+        7 : 'rgba(47, 201, 226, 1)',
+        8 : 'rgba(28, 127, 238, 1)',
+        9 : 'rgba(95, 21, 242, 1)',
+        10 : 'rgba(186, 12, 248, 1)',
+        11 : 'rgba(251, 7, 217, 1)',
+        12 : 'rgba(255, 0, 0, 1)'
     }
     return colors[Math.floor(Math.random() * Object.keys(colors).length) + 1];
 }
 
 function getColor(){
-    if (ui.rainbowToggle.classList.contains('active'))
-        return getRandomColor()
-    return ui.colorSelector.value;
+    return ui.rainbowToggle.classList.contains('active') ? getRandomColor() : ui.colorSelector.value;
 }
 
 function buildCanvas(size){
