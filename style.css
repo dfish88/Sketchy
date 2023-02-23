@@ -31,10 +31,10 @@ button:hover{
 }
 
 .canvas{
-    border-style: solid;
-    border-color: black;
     width: 500px;
     height: 500px;
+    background-color: white;
+    box-shadow: 2px 2px 8px 4px rgb(167, 166, 166);
 }
 
 .active{
@@ -52,4 +52,7 @@ button:hover{
         rgba(251, 7, 217, 1) 90%,
         rgba(255, 0, 0, 1) 100%
     );
+}
+
+.color-selector{
 }
