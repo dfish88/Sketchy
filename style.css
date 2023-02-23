@@ -1,7 +1,7 @@
 body{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     background-color: rgb(241, 255, 225);
     font-family: sans-serif;
     min-height: 100vh;
@@ -33,7 +33,7 @@ button:hover{
     display: flex;
     justify-content: center;
     gap: 100px;
-    flex: 1 1 auto;
+    flex: 1;
 }
 
 .footer{
