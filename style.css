@@ -46,7 +46,8 @@ button:hover{
 .left-sidebar{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 50px;
 }
 
 .canvas-container{
