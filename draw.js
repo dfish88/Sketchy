@@ -3,7 +3,8 @@ const ui = {
     clearButton : document.querySelector('.clear'),
     sizeSelector : document.querySelector('.size-selector'),
     colorSelector : document.querySelector('.color-selector'),
-    rainbowToggle : document.querySelector('.rainbow-toggle')
+    rainbowToggle : document.querySelector('.rainbow-toggle'),
+    maxCanvasSize : 128
 };
 
 function removeCells(){
@@ -56,9 +57,9 @@ function buildCanvas(size){
 
 function setUp(){
     ui.clearButton.addEventListener('click', clearCanvas);
-    ui.sizeSelector.addEventListener('change', (e) => { removeCells(); buildCanvas(e.target.value);})
-    ui.rainbowToggle.addEventListener('click', () => {ui.rainbowToggle.classList.toggle('active')})
-    buildCanvas(ui.sizeSelector.value);
+    ui.sizeSelector.addEventListener('change', (e) => { removeCells(); buildCanvas(ui.maxCanvasSize - e.target.value);});
+    ui.rainbowToggle.addEventListener('click', () => {ui.rainbowToggle.classList.toggle('active')});
+    buildCanvas(ui.maxCanvasSize - ui.sizeSelector.value);
 }
 
 setUp();
